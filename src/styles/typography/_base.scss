@@ -1,0 +1,16 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: $font-weight-default;
+  font-family: $font-family-default;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  line-height: $line-height-default;
+  letter-spacing: $letter-spacing-default;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
