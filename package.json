@@ -1,0 +1,9 @@
+{
+  "name": "rootstrap-ui",
+  "version": "0.0.1",
+  "description": "Rootstrap's UI Components & Styles",
+  "main": "index.js",
+  "author": "Rootstrap",
+  "license": "MIT",
+  "private": true
+}
