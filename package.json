@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=development start-storybook -p 9001 -c .storybook",
+    "start": "NODE_ENV=development start-storybook -s ./public -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "devDependencies": {
