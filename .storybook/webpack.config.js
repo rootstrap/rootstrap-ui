@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   module: {
@@ -14,16 +14,16 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true,
-            },
+              sourceMap: true
+            }
           },
           'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
-            },
-          },
+              sourceMap: true
+            }
+          }
         ],
         include: path.resolve(__dirname, '../')
       },
@@ -38,7 +38,7 @@ module.exports = {
       {
         test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/,
         loader: 'url-loader?limit=10000&mimetype=application/octet-stream'
-      },
+      }
     ]
   }
-};
+}
