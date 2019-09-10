@@ -1,0 +1,8 @@
+{
+  "extends": "stylelint-config-recommended",
+  defaultSeverity: "error",
+  "plugins": [ "stylelint-order" ],
+  "rules": {
+    "order/properties-alphabetical-order": true
+  }
+}
