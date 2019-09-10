@@ -1,0 +1,24 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:lts
+
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install dependencies
+          command: yarn --frozen-lockfile
+      - run:
+          name: Run linter for Javascript
+          command: yarn lint:js
+      - run:
+          name: Run linter for Css & Scss
+          command: yarn lint:style
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache
