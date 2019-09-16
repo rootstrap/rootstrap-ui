@@ -18,4 +18,4 @@ Moving from nothing to have a DS for each project is unrealistic. After a discus
 
 Guidelines or design rules will be discussed and documented. Then Design + Engineering teams should be aligned with these rules. For some design rules, we will create a Figma template, so it's easier to adopt them in all the projects.
 
-_ _For example: After defining a typography system, we create a Figma template page for typography with examples, rules, and modifiers. Then the designer can use this template to create custom typography for a specific project just changing a few things, and it will be aligned with the typography system._ _
+_For example: After defining a typography system, we create a Figma template page for typography with examples, rules, and modifiers. Then the designer can use this template to create custom typography for a specific project just changing a few things, and it will be aligned with the typography system._
