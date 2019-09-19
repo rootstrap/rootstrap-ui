@@ -3,14 +3,14 @@ html {
 }
 
 body {
-  font-family: $font-family-default;
+  font-family: $font-family;
   font-size: 1rem;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-variant-ligatures: none;
-  font-weight: $font-weight-default;
-  letter-spacing: $letter-spacing-default;
-  line-height: $line-height-default;
+  font-weight: $font-weight-normal;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
   text-rendering: optimizeLegibility;
 }

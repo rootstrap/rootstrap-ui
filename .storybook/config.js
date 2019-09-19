@@ -5,7 +5,13 @@ import theme from './theme'
 import './styles.scss'
 
 addParameters({
-  options: { theme }
+  options: {
+    theme,
+    hierarchySeparator: /\//,
+    hierarchyRootSeparator: /\|/,
+    showPanel: false,
+    sortStoriesByKind: false
+  }
 })
 
 const req = require.context('../src', true, /\.stories\.js$/)

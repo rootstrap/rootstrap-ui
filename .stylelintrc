@@ -3,6 +3,11 @@
   defaultSeverity: "error",
   "plugins": [ "stylelint-order" ],
   "rules": {
-    "order/properties-alphabetical-order": true
+    "order/properties-alphabetical-order": true,
+    "at-rule-no-unknown": [
+      true, {
+        "ignoreAtRules": ["extend", "mixin", "include", "each", "if", "function", "return", "for"]
+      }
+    ]
   }
 }
