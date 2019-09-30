@@ -36,9 +36,7 @@
     padding: 2px 3px 1px;
   }
 
-  &--bold {
-    font-weight: $font-weight-bold;
-  }
+  &--bold { font-weight: $font-weight-bold; }
 }
 
 // Spacing
@@ -61,9 +59,7 @@ $spacing-values: (
 // Margins all around
 .sb-m {
   @each $key, $value in $spacing-values {
-    &-#{$key} {
-      margin: $value;
-    }
+    &-#{$key} { margin: $value; }
   }
 }
 
@@ -90,45 +86,35 @@ $spacing-values: (
 // Margins - top only
 .sb-mt {
   @each $key, $value in $spacing-values {
-    &-#{$key} {
-      margin-top: $value;
-    }
+    &-#{$key} { margin-top: $value; }
   }
 }
 
 // Margins - right only
 .sb-mr {
   @each $key, $value in $spacing-values {
-    &-#{$key} {
-      margin-right: $value;
-    }
+    &-#{$key} { margin-right: $value; }
   }
 }
 
 // Margins - bottom only
 .sb-mb {
   @each $key, $value in $spacing-values {
-    &-#{$key} {
-      margin-bottom: $value;
-    }
+    &-#{$key} { margin-bottom: $value; }
   }
 }
 
 // Margins - left only
 .sb-ml {
   @each $key, $value in $spacing-values {
-    &-#{$key} {
-      margin-left: $value;
-    }
+    &-#{$key} { margin-left: $value; }
   }
 }
 
 // Paddings all around
 .sb-p {
   @each $key, $value in $spacing-values {
-    &-#{$key} {
-      padding: $value;
-    }
+    &-#{$key} { padding: $value; }
   }
 }
 
@@ -155,35 +141,27 @@ $spacing-values: (
 // Paddings - top only
 .sb-pt {
   @each $key, $value in $spacing-values {
-    &-#{$key} {
-      padding-top: $value;
-    }
+    &-#{$key} { padding-top: $value; }
   }
 }
 
 // Padding - right only
 .sb-pr {
   @each $key, $value in $spacing-values {
-    &-#{$key} {
-      padding-right: $value;
-    }
+    &-#{$key} { padding-right: $value; }
   }
 }
 
 // Paddings - bottom only
 .sb-pb {
   @each $key, $value in $spacing-values {
-    &-#{$key} {
-      padding-bottom: $value;
-    }
+    &-#{$key} { padding-bottom: $value; }
   }
 }
 
 // Paddings - left only
 .sb-pl {
   @each $key, $value in $spacing-values {
-    &-#{$key} {
-      padding-left: $value;
-    }
+    &-#{$key} { padding-left: $value; }
   }
 }
