@@ -1,15 +1,12 @@
-html {
-  font-size: 16px;
-}
+html { font-size: 16px; }
 
 body {
   font-family: $font-family;
   font-size: 1rem;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-variant-ligatures: none;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-regular;
   letter-spacing: $letter-spacing;
   line-height: $line-height;
   text-rendering: optimizeLegibility;

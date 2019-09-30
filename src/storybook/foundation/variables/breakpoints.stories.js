@@ -19,7 +19,7 @@ storiesOf('Foundation|Variables', module).add('Breakpoints', () => (
       <h5 className="sb-text-h5">Screen breakpoints</h5>
       <p>
         Usually breakpoints target different devices to display a responsive
-        content. e.g: desktop, tablet, phone, etc
+        content, e.g: desktop, tablet, phone, etc).
       </p>
       <table className="sb-m-3 breakpoints-table">
         <thead>
@@ -137,7 +137,7 @@ storiesOf('Foundation|Variables', module).add('Breakpoints', () => (
     <div className="sb-mb-4">
       <h4 className="sb-text-h4">Mixins</h4>
       <p>
-        CSS Media query is a tecnique to take advantage of these breakpoints.{' '}
+        CSS Media query is a technique to take advantage of these breakpoints.{' '}
         <Code>rootstrap-ui</Code> provides mixins to simplify the media queries
         for the different breakpoints.
       </p>
