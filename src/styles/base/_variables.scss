@@ -1,13 +1,45 @@
 // Typography
 // --------------
-$font-family-default: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
+$font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
 
-$font-weight-default: 400;
-$font-weight-normal: 400;
-$font-weight-light: 300;
-$font-weight-bold: 700;
+$font-weight-regular: 400 !default;
+$font-weight-light: 300 !default;
+$font-weight-bold: 700 !default;
 
-$letter-spacing-default: 0.03em;
+$letter-spacing: .03em !default;
 
-$line-height-default: 1;
+$line-height: 1.5 !default;
+// --------------
+
+// Breakpoints
+// --------------
+// Screen breakpoints
+$bp-xs: 0 !default;
+$bp-sm: 576px !default;
+$bp-md: 768px !default;
+$bp-lg: 992px !default;
+$bp-xl: 1200px !default;
+
+$screen-breakpoints: (
+  xs: $bp-xs,
+  sm: $bp-sm,
+  md: $bp-md,
+  lg: $bp-lg,
+  xl: $bp-xl
+) !default;
+
+// Grid breakpoints
+$bp-grid-xs: $bp-xs !default;
+$bp-grid-sm: $bp-sm !default;
+$bp-grid-md: $bp-md !default;
+$bp-grid-lg: $bp-lg !default;
+$bp-grid-xl: $bp-xl !default;
+
+$grid-breakpoints: (
+  xs: $bp-grid-xs,
+  sm: $bp-grid-sm,
+  md: $bp-grid-md,
+  lg: $bp-grid-lg,
+  xl: $bp-grid-xl
+) !default;
 // --------------

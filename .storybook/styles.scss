@@ -1,2 +1,167 @@
 // import Rootstrap UI styles
 @import '../src/styles/index';
+
+// Storybook Variables
+@import 'variables';
+
+// Storybook styles - Replace these classes as we extend rootstrap-ui
+// Typography
+.sb-text {
+  &-h1 { font-size: 48px; }
+  &-h2 { font-size: 32px; }
+  &-h3 { font-size: 28px; }
+  &-h4 { font-size: 24px; }
+  &-h5 { font-size: 20px; }
+  &-h6 { font-size: 16px; }
+  &-h7 { font-size: 12px; }
+  &-h8 { font-size: 8px; }
+
+  &-h1,
+  &-h2,
+  &-h3,
+  &-h4,
+  &-h5,
+  &-h6,
+  &-h7,
+  &-h8 {
+    font-weight: $font-weight-bold;
+  }
+
+  &--code {
+    background-color: $color-gray-500;
+    border: 1px solid $color-gray-400;
+    border-radius: 3px;
+    color: $color-code;
+    font-family: monospace;
+    padding: 2px 3px 1px;
+  }
+
+  &--bold { font-weight: $font-weight-bold; }
+}
+
+// Spacing
+$spacing-values: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+  6: 24px,
+  7: 28px,
+  8: 32px,
+  9: 48px,
+  10: 64px,
+  11: 64px,
+  12: 96px
+);
+
+// Margins all around
+.sb-m {
+  @each $key, $value in $spacing-values {
+    &-#{$key} { margin: $value; }
+  }
+}
+
+// Margins - x axis only
+.sb-mx {
+  @each $key, $value in $spacing-values {
+    &-#{$key} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+  }
+}
+
+// Margins - y axis only
+.sb-my {
+  @each $key, $value in $spacing-values {
+    &-#{$key} {
+      margin-bottom: $value;
+      margin-top: $value;
+    }
+  }
+}
+
+// Margins - top only
+.sb-mt {
+  @each $key, $value in $spacing-values {
+    &-#{$key} { margin-top: $value; }
+  }
+}
+
+// Margins - right only
+.sb-mr {
+  @each $key, $value in $spacing-values {
+    &-#{$key} { margin-right: $value; }
+  }
+}
+
+// Margins - bottom only
+.sb-mb {
+  @each $key, $value in $spacing-values {
+    &-#{$key} { margin-bottom: $value; }
+  }
+}
+
+// Margins - left only
+.sb-ml {
+  @each $key, $value in $spacing-values {
+    &-#{$key} { margin-left: $value; }
+  }
+}
+
+// Paddings all around
+.sb-p {
+  @each $key, $value in $spacing-values {
+    &-#{$key} { padding: $value; }
+  }
+}
+
+// Paddings - x axis only
+.sb-px {
+  @each $key, $value in $spacing-values {
+    &-#{$key} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+  }
+}
+
+// Paddings - y axis only
+.sb-py {
+  @each $key, $value in $spacing-values {
+    &-#{$key} {
+      padding-bottom: $value;
+      padding-top: $value;
+    }
+  }
+}
+
+// Paddings - top only
+.sb-pt {
+  @each $key, $value in $spacing-values {
+    &-#{$key} { padding-top: $value; }
+  }
+}
+
+// Padding - right only
+.sb-pr {
+  @each $key, $value in $spacing-values {
+    &-#{$key} { padding-right: $value; }
+  }
+}
+
+// Paddings - bottom only
+.sb-pb {
+  @each $key, $value in $spacing-values {
+    &-#{$key} { padding-bottom: $value; }
+  }
+}
+
+// Paddings - left only
+.sb-pl {
+  @each $key, $value in $spacing-values {
+    &-#{$key} { padding-left: $value; }
+  }
+}
