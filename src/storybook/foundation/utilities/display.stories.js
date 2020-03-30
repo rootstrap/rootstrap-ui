@@ -1,6 +1,18 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+import List from '../../components/List'
+import Code from '../../components/Code'
+import { displayClasses } from './classes'
+
+const renderList = classNames => (
+  <List
+    elements={classNames.map(className => (
+      <Code key={className}>{className}</Code>
+    ))}
+  />
+)
+
 storiesOf('Foundation|Utilities', module).add('Display', () => (
   <div className="sb-m-6">
     <h2 className="sb-text-h2">Dispay</h2>
@@ -19,44 +31,9 @@ storiesOf('Foundation|Utilities', module).add('Display', () => (
     </a>
     <div>
       <p>The classes are named using the format:</p>
-      <ul>
-        <li>
-          <code className="sb-text--code">.d-{'{value}'}</code>
-        </li>
-        <li>
-          <code className="sb-text--code">.d-{'{breakpoint}-{value}'}</code>
-        </li>
-      </ul>
+      {renderList(displayClasses.display)}
       <p>Where value is one of:</p>
-      <ul>
-        <li>
-          <code className="sb-text--code">none</code>
-        </li>
-        <li>
-          <code className="sb-text--code">inline</code>
-        </li>
-        <li>
-          <code className="sb-text--code">inline-block</code>
-        </li>
-        <li>
-          <code className="sb-text--code">block</code>
-        </li>
-        <li>
-          <code className="sb-text--code">table</code>
-        </li>
-        <li>
-          <code className="sb-text--code">table-cell</code>
-        </li>
-        <li>
-          <code className="sb-text--code">table-row</code>
-        </li>
-        <li>
-          <code className="sb-text--code">flex</code>
-        </li>
-        <li>
-          <code className="sb-text--code">inline-flex</code>
-        </li>
-      </ul>
+      {renderList(displayClasses.values)}
     </div>
     <div>
       <h4 className="sb-text-h4">Customize display utilities</h4>
