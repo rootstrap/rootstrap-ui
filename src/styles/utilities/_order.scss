@@ -1,0 +1,15 @@
+// Order
+
+@each $breakpoint in map-keys($screen-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $screen-breakpoints);
+
+    .order#{$infix}-first { order: -1; }
+
+    .order#{$infix}-last { order: $max-order + 1; }
+
+    @for $i from 0 through $max-order {
+      .order#{$infix}-#{$i} { order: $i; }
+    }
+  }
+}

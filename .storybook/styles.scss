@@ -1,10 +1,24 @@
-// import Rootstrap UI styles
-@import '../src/styles/index';
-
 // Storybook Variables
 @import 'variables';
 
+// import Rootstrap UI styles
+@import '../src/styles/index';
+
 // Storybook styles - Replace these classes as we extend rootstrap-ui
+
+// TODO: use utility classes + components for lists
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  padding-inline-start: 40px;
+
+  li { margin-bottom: .25rem; }
+}
+
 // Typography
 .sb-text {
   &-h1 { font-size: 48px; }
