@@ -1,0 +1,13 @@
+//
+// Utilities for common `display` values
+//
+
+@each $breakpoint in map-keys($screen-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $screen-breakpoints);
+
+    @each $value in $displays {
+      .d#{$infix}-#{$value} { display: $value !important; }
+    }
+  }
+}

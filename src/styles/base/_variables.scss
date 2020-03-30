@@ -44,7 +44,9 @@ $grid-breakpoints: (
 ) !default;
 // --------------
 
-// Order
+// Utilities
 // --------------
 $max-order: 12 !default;
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
 // --------------

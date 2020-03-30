@@ -5,11 +5,12 @@ storiesOf('Foundation|Utilities', module).add('Flex', () => (
   <div className="sb-m-6">
     <h2 className="sb-text-h2">Flex</h2>
     <p className="sb-mb-4">Utility classes for flexbox layout</p>
-    <p className="sb-mb-4">
-      <a href="https://github.com/rootstrap/rootstrap-ui/tree/develop/src/styles/utilities/_flex.scss">
-        Development file
-      </a>
-    </p>
+    <a
+      className="sb-mb-4 d-block"
+      href="https://github.com/rootstrap/rootstrap-ui/tree/develop/src/styles/utilities/_flex.scss"
+    >
+      Development file
+    </a>
     <div className="sb-mb-4">
       <h5 className="sb-text-h5">Display</h5>
       <ul>
