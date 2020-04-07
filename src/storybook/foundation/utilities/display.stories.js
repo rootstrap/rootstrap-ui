@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import List from '../../components/List'
 import Code from '../../components/Code'
-import { displayClasses } from './classes'
+import displayClasses from './display'
 
 const renderList = classNames => (
   <List

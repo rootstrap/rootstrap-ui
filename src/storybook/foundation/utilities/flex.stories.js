@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import List from '../../components/List'
 import Code from '../../components/Code'
-import { flexClasses } from './classes'
+import flexClasses from './flex'
 
 const renderList = classNames => (
   <List
