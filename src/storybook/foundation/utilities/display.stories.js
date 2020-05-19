@@ -14,7 +14,7 @@ const renderList = classNames => (
 )
 
 storiesOf('Foundation|Utilities', module).add('Display', () => (
-  <div className="sb-m-6">
+  <div className="container sb-my-6">
     <h2 className="sb-text-h2">Dispay</h2>
     <p className="sb-mb-4">
       Change the value of the{' '}

@@ -8,7 +8,7 @@ import CodeBlock from '../../components/CodeBlock'
 import './breakpoints.scss'
 
 storiesOf('Foundation|Variables', module).add('Breakpoints', () => (
-  <div className="sb-m-6">
+  <div className="container sb-my-6">
     <h2 className="sb-text-h2">Breakpoints</h2>
     <p className="sb-mb-4">
       Breakpoints are used to apply CSS props to the content depending on the
