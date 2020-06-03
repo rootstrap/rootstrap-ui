@@ -16,6 +16,24 @@ Goals:
 - Create Design Systems for specific projects using `rootstrap-ui` as a start point
 - Generate guidelines documentation
 
+## Getting started
+Rootstrap UI is available as an NPM package. To install the package in your project use `npm` or `yarn`.
+
+```bash
+yarn add rootstrap-ui
+npm install rootstrap-ui
+```
+
+### Styles
+Import the style library in your SCSS files after defining the custom variables.
+
+
+```scss
+@import 'your-custom-variables';
+@import 'mc-components/dist/styles/scss/index';
+```
+
+
 ## Motivation
 Moving from nothing to have a DS for each project is unrealistic. After a discussion with Design + Engineering, we decided to implement internal and reusable components/mixins and define guidelines. All the components must be validated with the design team and be as generic as possible.
 
