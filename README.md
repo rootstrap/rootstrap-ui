@@ -1,4 +1,4 @@
-# Rootstrap UI
+# Rootstrap UI  🎨
 
 [![NPM version](https://img.shields.io/npm/v/rootstrap-ui.svg?style=flat)](https://npmjs.org/package/rootstrap-ui)
 [![CircleCI](https://circleci.com/gh/rootstrap/rootstrap-ui.svg?style=svg&circle-token=0157efa8af8dfd3211d74b645cdee13c9a500a62)](https://circleci.com/gh/rootstrap/rootstrap-ui)
