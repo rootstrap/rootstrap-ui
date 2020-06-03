@@ -14,7 +14,7 @@ const renderList = classNames => (
 )
 
 storiesOf('Foundation|Utilities', module).add('Flex', () => (
-  <div className="sb-m-6">
+  <div className="container sb-my-6">
     <h2 className="sb-text-h2">Flex</h2>
     <p className="sb-mb-4">Utility classes for flexbox layout</p>
     <a

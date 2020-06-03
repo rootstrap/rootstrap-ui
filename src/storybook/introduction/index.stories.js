@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import packageJSON from '../../../package.json'
 
 storiesOf('Basics|Introduction', module).add('Getting Started', () => (
-  <div className="sb-m-6">
+  <div className="container sb-my-6">
     <h2 className="sb-text-h2">Rootstrap UI - Components & Styles</h2>
     <p className="sb-mb-4">Version: {packageJSON.version}</p>
     <p>

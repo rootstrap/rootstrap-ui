@@ -1,3 +1,7 @@
+// Feature flags
+// --------------
+$grid-enabled: true !default;
+
 // Typography
 // --------------
 $font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
@@ -50,3 +54,18 @@ $max-order: 12 !default;
 
 $displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
 // --------------
+
+// Grid System
+// --------------
+$enable-grid-classes: $grid-enabled !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+$grid-row-columns: 0 !default;
+
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: $bp-sm,
+  md: $bp-md,
+  lg: $bp-lg,
+  xl: $bp-xl
+) !default;
