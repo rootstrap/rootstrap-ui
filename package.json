@@ -16,11 +16,15 @@
     "build": "yarn build:styles",
     "build:styles": "yarn build:scss",
     "build:scss": "mkdir -p ./dist/styles/scss && postcss ./src/styles --base ./src/styles --dir ./dist/styles/scss",
+    "lint": "yarn lint:js && yarn lint:style",
     "lint:js": "eslint src .storybook",
     "lint:js:fix": "eslint --fix src .storybook",
     "lint:style": "stylelint 'src/styles/**/*.{css,scss}' '.storybook/**/*.{css,scss}'",
     "lint:style:fix": "stylelint 'src/styles/**/*.{css,scss}' '.storybook/**/*.{css,scss}' --fix",
-    "prettier": "prettier './**/*.{js,jsx,ts,tsx,json,css,scss}' --write"
+    "prettier": "prettier './**/*.{js,jsx,ts,tsx,json,css,scss}' --write",
+    "preversion": "yarn lint",
+    "version": "yarn build && git add .",
+    "postversion": "git push origin $(git symbolic-ref --short -q HEAD) && git push origin $(git symbolic-ref --short -q HEAD) --tags && npm publish"
   },
   "husky": {
     "hooks": {
