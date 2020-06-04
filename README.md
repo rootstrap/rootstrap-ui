@@ -2,6 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/rootstrap-ui.svg?style=flat)](https://npmjs.org/package/rootstrap-ui)
 [![CircleCI](https://circleci.com/gh/rootstrap/rootstrap-ui.svg?style=svg&circle-token=0157efa8af8dfd3211d74b645cdee13c9a500a62)](https://circleci.com/gh/rootstrap/rootstrap-ui)
+[![License](https://img.shields.io/github/license/rootstrap/rootstrap-ui.svg)](https://github.com/rootstrap/rootstrap-ui/blob/master/LICENSE.md)
 
 Rootstrap UI is the components & styles library to build user interfaces in Rootstrap's projects.
 
@@ -40,3 +41,13 @@ Moving from nothing to have a DS for each project is unrealistic. After a discus
 Guidelines or design rules will be discussed and documented. Then Design + Engineering teams should be aligned with these rules. For some design rules, we will create a Figma template, so it's easier to adopt them in all the projects.
 
 _For example: After defining a typography system, we create a Figma template page for typography with examples, rules, and modifiers. Then the designer can use this template to create custom typography for a specific project just changing a few things, and it will be aligned with the typography system._
+
+## License
+
+Rootstrap UI is available under the MIT license. See the LICENSE file for more info.
+
+## Credits
+
+**Rootstrap** is maintained by [Rootstrap](http://www.rootstrap.com) with the help of our [contributors](https://github.com/rootstrap/rootstrap-ui/contributors).
+
+[<img src="https://s3-us-west-1.amazonaws.com/rootstrap.com/img/rs.png" width="100"/>](http://www.rootstrap.com)
