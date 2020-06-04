@@ -30,7 +30,7 @@ Import the style library in your SCSS files after defining the custom variables.
 
 ```scss
 @import 'your-custom-variables';
-@import 'mc-components/dist/styles/scss/index';
+@import '~rootstrap-ui/dist/styles/scss/index';
 ```
 
 
