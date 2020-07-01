@@ -2,7 +2,9 @@
   "name": "rootstrap-ui",
   "version": "0.0.2",
   "description": "Rootstrap's UI Components & Styles",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.js",
   "author": "Rootstrap",
   "license": "MIT",
   "engines": {
@@ -13,12 +15,13 @@
     "start": "NODE_ENV=development start-storybook -s ./public -p 9001 -c .storybook",
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
-    "build": "yarn build:styles",
+    "build": "yarn build:js && yarn build:styles",
+    "build:js": "tsc -p tsconfig.json",
     "build:styles": "yarn build:scss",
     "build:scss": "mkdir -p ./dist/styles/scss && postcss ./src/styles --base ./src/styles --dir ./dist/styles/scss",
     "lint": "yarn lint:js && yarn lint:style",
-    "lint:js": "eslint src .storybook",
-    "lint:js:fix": "eslint --fix src .storybook",
+    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:js:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix src",
     "lint:style": "stylelint 'src/styles/**/*.{css,scss}' '.storybook/**/*.{css,scss}'",
     "lint:style:fix": "stylelint 'src/styles/**/*.{css,scss}' '.storybook/**/*.{css,scss}' --fix",
     "prettier": "prettier './**/*.{js,jsx,ts,tsx,json,css,scss}' --write",
@@ -44,16 +47,23 @@
       "git add"
     ]
   },
+  "peerDependencies": {
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@storybook/react": "^5.2.1",
     "@storybook/storybook-deployer": "^2.8.1",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
     "eslint": "^5.16",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-typescript": "^8.0.2",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -77,6 +87,7 @@
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-order": "^3.1.1",
+    "typescript": "^3.9.5",
     "url-loader": "^2.1.0"
   }
 }

@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/react'],
-  plugins: ['prettier', 'react-hooks'],
+  extends: ['airbnb-typescript', 'prettier', 'prettier/react'],
+  plugins: ['prettier', '@typescript-eslint', 'react-hooks'],
   rules: {
     'prettier/prettier': ['error'],
     'object-curly-newline': 0,
@@ -80,7 +80,9 @@ module.exports = {
     'import/prefer-default-export': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-named-as-default': 0,
-    'react-hooks/rules-of-hooks': 'error'
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/semi': 0
   },
   globals: {
     window: true,
@@ -94,7 +96,10 @@ module.exports = {
     es6: true,
     jest: true
   },
-  parser: 'babel-eslint',
+  parserOptions: {
+    project: './tsconfig.json'
+  },
+  parser: '@typescript-eslint/parser',
   settings: {
     'import/resolver': {
       node: {

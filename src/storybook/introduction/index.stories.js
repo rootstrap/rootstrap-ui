@@ -25,7 +25,7 @@ storiesOf('Basics|Introduction', module).add('Getting Started', () => (
       <li>Define style standard for Engineering & Design</li>
       <li>Generate guidelines documentation</li>
       <li>
-        Create Design Systems for specific projects using rootstrap-ui as a
+        Create Design Systems for specific projects using rootstrap-ui as a
         start point
       </li>
     </ul>
