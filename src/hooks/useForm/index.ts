@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 
 interface UseFormOptions {
   initialValues: object
@@ -14,15 +14,24 @@ const useForm = (
     onSubmit,
     validator = () => ({}),
     validateOnChange = true,
-    validateOnBlur = false
+    validateOnBlur = true
   }: UseFormOptions,
   ...dependencies: any[]
 ) => {
-  const [values, setValues] = useState<object>(initialValues)
-  const [errors, setErrors] = useState<object>({})
+  const isMountedRef: any = useRef(null)
+  const [values, setValues] = useState<any>(initialValues)
+  const [errors, setErrors] = useState<any>({})
   const [blurredFields, setBlurredFields] = useState<object>({})
   const [submitting, setSubmitting] = useState<boolean>(false)
   const [submitted, setSubmitted] = useState<boolean>(false)
+
+  useEffect(() => {
+    isMountedRef.current = true
+
+    return () => {
+      isMountedRef.current = false
+    }
+  }, [])
 
   const handleSubmit = useCallback(
     async (event: any): Promise<any> => {
@@ -36,6 +45,10 @@ const useForm = (
         setSubmitting(true)
         try {
           await onSubmit(values)
+          // Check if the component is still mounted
+          if (isMountedRef.current) {
+            setSubmitting(false)
+          }
         } catch (serverErrors) {
           setErrors(serverErrors)
           setSubmitting(false)
@@ -87,6 +100,17 @@ const useForm = (
     [blurredFields, setBlurredFields, runValidations, values, validateOnBlur]
   )
 
+  const getFieldProps = useCallback(
+    (fieldKey: string) => ({
+      value: values[fieldKey] || '',
+      onChange: ({ target: { value } }: any) =>
+        handleValueChange(fieldKey, value),
+      onBlur: () => handleBlur(fieldKey),
+      errors: errors[fieldKey]
+    }),
+    [handleBlur, handleValueChange, values, errors]
+  )
+
   return {
     values,
     setValues,
@@ -97,7 +121,8 @@ const useForm = (
     setBlurredFields,
     handleValueChange,
     handleSubmit,
-    handleBlur
+    handleBlur,
+    getFieldProps
   }
 }
 

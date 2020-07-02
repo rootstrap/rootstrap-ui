@@ -76,13 +76,15 @@ module.exports = {
     'react/sort-comp': 1,
     'react/jsx-wrap-multilines': 0,
     'react/no-array-index-key': 0,
+    'react/jsx-props-no-spreading': 0,
     'import/extensions': 1,
     'import/prefer-default-export': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-named-as-default': 0,
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    '@typescript-eslint/semi': 0
+    '@typescript-eslint/semi': 0,
+    'import/no-unresolved': 0
   },
   globals: {
     window: true,
