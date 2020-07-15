@@ -1,4 +1,4 @@
-import { addParameters, configure } from '@storybook/react'
+import { addParameters } from '@storybook/react'
 import theme from './theme'
 
 // storybook styles
@@ -10,16 +10,6 @@ addParameters({
     hierarchySeparator: /\//,
     hierarchyRootSeparator: /\|/,
     showPanel: false,
-    sortStoriesByKind: false
-  }
+    sortStoriesByKind: false,
+  },
 })
-
-const req = require.context('../src', true, /\.stories\.js$/)
-
-function loadStories() {
-  // Force the introduction to load first!
-  require('../src/storybook/introduction/index.stories.js')
-  req.keys().forEach(filename => req(filename))
-}
-
-configure(loadStories, module)
