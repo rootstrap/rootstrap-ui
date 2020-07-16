@@ -10,7 +10,7 @@ const List = ({ elements }) => (
 )
 
 List.propTypes = {
-  elements: array.isRequired
+  elements: array.isRequired,
 }
 
 export default List

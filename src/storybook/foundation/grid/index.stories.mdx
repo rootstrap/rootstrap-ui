@@ -1,0 +1,114 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+
+import './index.scss'
+
+<Meta title="Foundation|Grid/Grid System" />
+
+# Grid System
+
+The grid system should be used for creating layouts through a series of columns that contain your content. The system is responsive and works with every screen size, its columns could scale according to screen sizes.
+
+[Rootstrap UI](https://github.com/rootstrap/rootstrap-ui) extends Bootstrap’s Grid System, so most of their documentation inherits to Rootstrap UI’s Grid.
+
+Check out [Bootstrap docs here](https://getbootstrap.com/docs/4.5/layout/grid/).
+
+## Containers
+
+Containers will keep the edge of your content lined up, as well as adding a barrier between the content and edge of screen. The width maxes out at `$container-max-widths variable`, and padding depends on screen size.
+
+Containers are the most basic layout element and **are required when using our default grid system.**
+
+- `.container`
+- `.container-{breakpoint}`
+
+#### Container fluid
+
+Identical to a normal container, but the width does not max out.
+
+- `.container-fluid`
+
+For more [view the full documentation](https://getbootstrap.com/docs/4.5/layout/overview/#containers)
+
+## Rows and columns
+
+Grid system uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is fully responsive.
+
+Classes for defining rows and columns:
+
+- `.row`
+- `.col`
+- `.col-{breakpoint}`
+
+## Example
+
+<Preview>
+  <div className="row">
+    <div className="col-6">
+      <div className="grid-col-example">.col-6</div>
+    </div>
+    <div className="col-6">
+      <div className="grid-col-example">.col-6</div>
+    </div>
+    <div className="col-sm-12 col-md-4">
+      <div className="grid-col-example">.col-sm-12.col-md-4</div>
+    </div>
+    <div className="col-sm-12 col-md-4">
+      <div className="grid-col-example">.col-sm-12.col-md-4</div>
+    </div>
+    <div className="col-sm-12 col-md-4">
+      <div className="grid-col-example">.col-sm-12.col-md-4</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+    <div className="col-md">
+      <div className="grid-col-example">.col-md</div>
+    </div>
+  </div>
+</Preview>
+
+## Gutters
+
+Columns have horizontal padding to create the gutters between individual columns.
+
+### No gutters
+
+The gutters between columns in our predefined grid classes can be removed adding the class `.no-gutters` to the row element.
+
+## Customize grid
+
+| Variable                | Value                                                  | Description                                               |
+| ----------------------- | ------------------------------------------------------ | --------------------------------------------------------- |
+| `$grid-columns`         | 12                                                     | Number of grid columns                                    |
+| `$grid-gutter-width`    | 30px                                                   | Defines grid's gutter width                               |
+| `$container-max-widths` | sm: `$bp-sm`, md: `$bp-md`, lg: `$bp-lg`, xl: `$bp-xl` | Maximum width of the container for different screen sizes |

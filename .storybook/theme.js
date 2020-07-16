@@ -8,5 +8,5 @@ export default create({
   brandImage: './rootstrap-logo.svg',
 
   // Typography
-  fontBase: '"Rubik", "Arial", sans-serif;'
+  fontBase: '"Rubik", "Arial", sans-serif;',
 })

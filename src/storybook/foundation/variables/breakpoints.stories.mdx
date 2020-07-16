@@ -1,0 +1,57 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Foundation|Variables/Breakpoints" />
+
+# Breakpoints
+
+Breakpoints are used to apply CSS props to the content depending on the device width/height.
+
+**Rootstrap UI** defines all of these breakpoints with SCSS variables.
+
+## Screen breakpoints
+
+Usually breakpoints target different devices to display a responsive content, e.g: desktop, tablet, phone, etc).
+
+| Variable | Value  | Description                          |
+| -------- | ------ | ------------------------------------ |
+| `$bp-xs` | 0      | Extra small devices                  |
+| `$bp-sm` | 576px  | Small devices (phones)               |
+| `$bp-md` | 768px  | Medium devices (tablets)             |
+| `$bp-lg` | 992px  | Large devices (desktops)             |
+| `$bp-xl` | 1200px | Extra large devices (large desktops) |
+
+## Grid breakpoints
+
+Grid System has its own breakpoints. This gives you flexibility to define different breakpoints for the grid and the screens.
+
+Grid breakpoints have the same values as Screen breakpoints by default.
+
+| Variable      | Value    | Description                          |
+| ------------- | -------- | ------------------------------------ |
+| `$bp-grid-xs` | `$bp-xs` | Extra small devices                  |
+| `$bp-grid-sm` | `$bp-sm` | Small devices (phones)               |
+| `$bp-grid-md` | `$bp-md` | Medium devices (tablets)             |
+| `$bp-grid-lg` | `$bp-lg` | Large devices (desktops)             |
+| `$bp-grid-xl` | `$bp-xl` | Extra large devices (large desktops) |
+
+## Mixins
+
+CSS Media query is a technique to take advantage of these breakpoints. **Rootstrap UI** provides mixins to simplify the media queries for the different breakpoints.
+
+## Example
+
+```scss
+// Example: Hide starting at \`min-width: 0\`, and then show at the \`sm\` breakpoint
+.custom-class {
+  display: none;
+}
+@include media-breakpoint-up(sm) {
+  .custom-class {
+    display: block;
+  }
+}
+```
+
+## Customize breakpoints
+
+In order to change a breakpoint value, assign a new value to the variable name before importing **Rootstrap UI**'s styles.
