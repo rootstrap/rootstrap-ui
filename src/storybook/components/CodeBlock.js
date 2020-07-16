@@ -12,7 +12,7 @@ const CodeBlock = ({ children, language = 'scss' }) => (
 
 CodeBlock.propTypes = {
   children: PropTypes.string.isRequired,
-  language: PropTypes.string.isRequired
+  language: PropTypes.string.isRequired,
 }
 
 export default CodeBlock
